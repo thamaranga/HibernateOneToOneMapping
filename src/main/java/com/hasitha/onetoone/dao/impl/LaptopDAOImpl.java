@@ -1,26 +1,24 @@
-package com.hasitha.dao.impl;
+package com.hasitha.onetoone.dao.impl;
 
-import com.hasitha.dao.LaptopDAO;
-import com.hasitha.dao.StudentDAO;
-import com.hasitha.entity.Laptop;
-import com.hasitha.entity.Student;
-import com.hasitha.util.HibernateUtil;
+import com.hasitha.onetoone.dao.LaptopDAO;
+import com.hasitha.onetoone.entity.Laptop;
+import com.hasitha.onetoone.util.HibernateUtil;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-public class StudentDAOImpl implements StudentDAO {
+public class LaptopDAOImpl implements LaptopDAO {
 
 
     @Override
-    public int addStudent(Student student)  throws HibernateException{
+    public int addLaptop(Laptop laptop)  throws HibernateException{
         int result=-1;
         Transaction transaction=null;
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             transaction=session.beginTransaction();
-            result=(int)session.save(student);
+            result=(int)session.save(laptop);
             transaction.commit();
-            System.out.println("Student is created  with Id::"+result);
+            System.out.println("Laptop is created  with Id::"+result);
 
         } catch (HibernateException e) {
             transaction.rollback();

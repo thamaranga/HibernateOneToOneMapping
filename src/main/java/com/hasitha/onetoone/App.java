@@ -1,11 +1,12 @@
-package com.hasitha;
+package com.hasitha.onetoone;
 
-import com.hasitha.entity.Laptop;
-import com.hasitha.entity.Student;
-import com.hasitha.service.LaptopService;
-import com.hasitha.service.StudentService;
-import com.hasitha.service.impl.LaptopServiceImpl;
-import com.hasitha.service.impl.StudentServiceImpl;
+import com.hasitha.onetoone.entity.Laptop;
+import com.hasitha.onetoone.entity.Student;
+import com.hasitha.onetoone.service.LaptopService;
+import com.hasitha.onetoone.service.StudentService;
+import com.hasitha.onetoone.service.impl.LaptopServiceImpl;
+import com.hasitha.onetoone.service.impl.StudentServiceImpl;
+
 
 
 public class App 
@@ -43,6 +44,9 @@ public class App
             }else{
                 System.out.println("Error occured while saving student");
             }
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-package com.hasitha.entity;
+package com.hasitha.onetoone.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

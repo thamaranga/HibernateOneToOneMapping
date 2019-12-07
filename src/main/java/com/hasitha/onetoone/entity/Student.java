@@ -1,4 +1,4 @@
-package com.hasitha.entity;
+package com.hasitha.onetoone.entity;
 
 import javax.persistence.*;
 
@@ -43,5 +43,16 @@ public class Student {
 
     public void setLaptop(Laptop laptop) {
         this.laptop = laptop;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", marks=" + marks +
+                ", laptop.id=" + laptop.getId() +
+                ", laptop.name=" + laptop.getName() +
+                '}';
     }
 }
